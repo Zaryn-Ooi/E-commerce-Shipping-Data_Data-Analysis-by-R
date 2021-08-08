@@ -387,7 +387,7 @@ ggplot(data = PriorP, aes(Var1, Freq)) +
 
 Analysis: 
 
-According to the graph, the prior purchases of the genders are almost the same. Therefore, we can say that gender does not matter in prior purchases.
+According to the graph, Female customer had more prior purchase than Male customer, but the prior purchases of both genders are almost the same.
 
 
 
