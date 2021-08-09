@@ -183,7 +183,7 @@ From the bar chart, we can identify that most product did not reached on time. T
 
 ### 2) Relation Between Customer Care Calls over Cost of The Product
 
-To identify the relationship between Customer Care Calls and Cost of Product, I will create a new summarized table where I will classify the cost of the product into more easily interpretable categories for the analysis.
+To identify the relationship between Customer Care Calls and Cost of Product, I will create a new summarized table with the `summarise()` and `case_when()` function where I will classify the Cost of the Product into more easily interpretable categories for the analysis.
 
 ```{r}
 min(Train$Cost_of_the_Product)
@@ -230,7 +230,7 @@ Additionally, the prices of the products in 6 or 7 calls to customer increases t
 
 ### 3) Discount Offered over Product Importance 
 
-I will create a new summarized table named "Discount" where I classified the Discount Offered into more easily interpretable categories for the analysis.
+I will create a new summarized table named "Discount" with the `summarise()` and `case_when()` function where I will classify the Discount Offered into more easily interpretable categories for the analysis.
 
 ```{r}
 Discount <- Train %>% 
