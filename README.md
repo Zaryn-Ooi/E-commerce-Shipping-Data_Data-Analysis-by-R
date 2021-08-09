@@ -12,6 +12,7 @@ An international e-commerce company based wants to discover key insights from th
 
 
 ## Task
+Identify: 
   1)  Relation Between Customer Rating vs Product Arrived on Time 
   2)  Relation Between Customer Care Calls vs Cost of The Product
   3)  Discount Offered over Product Importance 
