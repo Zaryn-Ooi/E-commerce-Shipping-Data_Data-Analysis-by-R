@@ -227,9 +227,9 @@ ggplot(data = Cost,aes(Cost_of_the_Product,Customer_care_calls,fill = Cost_of_th
 
 Analysis: 
 
-Here, we can see customer who bought products that costs below 100 did not made calls to make enquiry for the shipment. As seen above, customers who urchased products that costs between 100 to 300 start to made 2 to 7 calls to make enquiry for the shipment. In this case, most of these customers made 4 calls to ask for their shipment. 
+Here, we can see customer who bought products that costs below $100 did not made calls to make enquiry for the shipment. As seen above, customers who purchased products that costs between $100 to $300 start to made 2 to 7 calls to make enquiry for the shipment. In this case, most of these customers made 4 calls to ask for their shipment. 
 
-Additionally, the prices of the products in 6 or 7 calls to customer increases to above 300. In short, as the cost of the product increases, the number of calls made by customer for shipment enquiry will also increase. Reason being is that they might worry that they will lost shipment that worth more than $300. 
+Additionally, the prices of the products in 6 or 7 calls to customer increases to above $300. In short, as the cost of the product increases, the number of calls made by customer for shipment enquiry will also increase. Reason being is that they might worry that they will lost shipment that worth more than $300. 
 
 
 
@@ -387,7 +387,7 @@ ggplot(data = PriorP, aes(Var1, Freq)) +
 
 Analysis: 
 
-According to the graph, Female customer had more prior purchase than Male customer, but the prior purchases of both genders are almost the same.
+According to the graph, Female customers made more prior purchase than Male customer, but the prior purchases of both genders are almost the same.
 
 
 
