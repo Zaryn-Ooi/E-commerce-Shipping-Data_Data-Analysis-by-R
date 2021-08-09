@@ -8,7 +8,8 @@ output: html_document
 
 
 ## Backgroud of the Company 
-An international e-commerce company based wants to discover key insights from their customer database. They want to use some of the most advanced machine learning techniques to study their customers. The company sells electronic products.
+An international e-commerce company based wants to discover key insights from their customer database. 
+They want to use some of the most advanced machine learning techniques to study their customers. The company sells electronic products.
 
 
 ## Task
@@ -141,7 +142,9 @@ Train <- Train %>%
 
 ### 1) Relation Between Customer Rating over Product Arrived on Time 
 
-I would like to identify if the product will reached on time for customers who gave the company good ratings than those who gave poor ratings. In this case, 1 is the lowest, while 5 is the highest. Hence, I will create a new summarized table where I will classify the Customer Rating into "Good Rating" and "Poor Rating" for the analysis. 
+I would like to identify if the product will reached on time for customers who gave the company good ratings than those who gave poor ratings. 
+In this case, 1 is the lowest, while 5 is the highest. Hence, I will create a new summarized table where I will classify the 
+Customer Rating into "Good Rating" and "Poor Rating" for the analysis. 
 
 ```{r}
 min(Train$Customer_rating)
@@ -163,7 +166,8 @@ head(Rating)
 
 #### Visualization
 
-I will create a barchart that represents the Product Reached on Time based on the two categories of Customer Rating. It is faceted by two categories, where 'No' indicates Product Did Not Reached on Time and 'Yes' indicates Product Reached on Time.
+I will create a barchart that represents the Product Reached on Time based on the two categories of Customer Rating. 
+It is faceted by two categories, where 'No' indicates Product Did Not Reached on Time and 'Yes' indicates Product Reached on Time.
   
 ```{r}
 ggplot(data = Rating)+
@@ -178,13 +182,16 @@ labs(title = "Customer Rating over Product Reached on Time")
 
 Analysis: 
 
-From the bar chart, we can identify that most product did not reached on time. This barchart also shows that most customers who received their product on time are customers who gave good ratings. However, most customers who did not received their product on time are also customers who gave good ratings. Hence, this reveals that there is no correlation between customer ratings and product reached on time.
+From the bar chart, we can identify that most products did not reached on time. This barchart also shows that most customers who 
+received their product on time are customers who gave good ratings. That being said, most customers who did not received their product 
+on time are also those who gave good ratings. Hence, this reveals that there is no correlation between customer ratings and product reached on time.
 
 
 
 ### 2) Relation Between Customer Care Calls over Cost of The Product
 
-To identify the relationship between Customer Care Calls and Cost of Product, I will create a new summarized table with the `summarise()` and `case_when()` function where I will classify the Cost of the Product into more easily interpretable categories for the analysis.
+To identify the relationship between Customer Care Calls and Cost of Product, I will create a new summarized table with the 
+`summarise()` and `case_when()` function where I will classify the Cost of the Product into more easily interpretable categories for the analysis.
 
 ```{r}
 min(Train$Cost_of_the_Product)
@@ -207,7 +214,9 @@ head(Cost)
 
 #### Visualization
 
-For the visualization, I will create a barchart that represents the customer care calls based on the cost of the product and then it is faceted by the four categories of cost of the product. By doing this, I'm able to identify the relationship between the customer care calls and the cost of the product.
+For the visualization, I will create a barchart that represents the customer care calls based on the cost of the product and then 
+it is faceted by the four categories of cost of the product. By doing this, I'm able to identify the relationship between the customer care calls
+and the cost of the product.
 
 ```{r}
 ggplot(data = Cost,aes(Cost_of_the_Product,Customer_care_calls,fill = Cost_of_the_Product)) +
@@ -223,9 +232,15 @@ ggplot(data = Cost,aes(Cost_of_the_Product,Customer_care_calls,fill = Cost_of_th
 
 Analysis: 
 
-Here, we can see customer who bought products that costs below $100 did not made calls to make enquiry for the shipment. As seen above, customers who purchased products that costs between $100 to $300 start to made 2 to 7 calls to make enquiry for the shipment. In this case, most of these customers made 4 calls to ask for their shipment. 
+Here, we can see that customers who bought products that costs below $100 did not made calls to make enquiry for their shipment.
 
-Additionally, the prices of the products in 6 or 7 calls to customer increases to above $300. In short, as the cost of the product increases, the number of calls made by customer for shipment enquiry will also increase. Reason being is that they might worry that they will lost shipment that worth more than $300. 
+Customers who purchased products that costs between $100 to $300 start to made 2 to 7 calls to enquire their shipment, 
+in which the average number of customer care calls made by these customers is 4. 
+Interesting to note, the number of customer care calls made by these customers start to decrease after 4 calls.  
+
+Customer who purchase products that costs above $300 made 6 to 7 customer care calls to make enquiry for their shipment. 
+Reason being is that customer might worry that they will lost shipment that worth more than $300. 
+In short, as the cost of the product increases, the number of customer care calls made by customer for shipment enquiry will also increase. 
 
 
 
@@ -259,7 +274,8 @@ dsct <- as.data.frame(dsct)
 
 #### Visualization
 
-I will create three pie charts where I can identify the percentage of discount offered over three types of product importance. By doing this, I can find out the largest category of discount offered based on the importance of the product. 
+I will create three pie charts where I can identify the percentage of discount offered over three types of product importance. 
+By doing this, I can find out the largest category of discount offered based on the importance of the product. 
 
 
 ```{r Discount offered for High Importance Product }
@@ -283,8 +299,7 @@ The top 3 categories of Discount Offered for "High" importance product is :
 2) $10 to $19 off (11.6%) 
 3) $20 to $29 off (6.1%) 
 
-Besides, the pie chart also shows that there is no seller who offered
-$50 to $59 off (0%) for "High" importance product. 
+Besides, the pie chart also shows that there is no seller who offered $50 to $59 off (0%) for "High" importance product. 
 
 
 ```{r Discount offered for Low Importance Product}
@@ -349,7 +364,8 @@ ggplot(data = Train, aes(Received_On_Time)) +
 
 Analysis: 
 
-According to the barchart above, we can see that most sellers prefer to ship their products to customers via ship shipment. Besides, by comparing whether the product has reached on time, it seems that there are more shipments did not reached on time that shipments that reached on time. 
+According to the barchart above, we can see that most sellers prefer to ship their products to customers via ship shipment. 
+Besides, by comparing whether the product has reached on time, it seems that there are more shipments did not reached on time that shipments that has reached on time. 
 For shipment that reached on time, mostly were transported by ship. Hence, Ship appears to be the fastest and most desirable mode of transportation. 
 
 
@@ -378,6 +394,7 @@ ggplot(data = PriorP, aes(Var1, Freq)) +
 Analysis: 
 
 According to the graph, Female customers made more prior purchase than Male customer, but the prior purchases of both genders are almost the same.
+Hence, we can say that gender does not influence the amount of prior purchase. 
 
 
 
