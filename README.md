@@ -1,11 +1,4 @@
 # E-commerce-Shipping-Data_Data-Analysis-with-R
----
-title: "E-commerce Shipping Data"
-author: "Zaryn Ooi"
-date: "8/5/2021"
-output: html_document
----
-
 
 ## Backgroud of the Company 
 An international e-commerce company based wants to discover key insights from their customer database. 
@@ -13,7 +6,7 @@ They want to use some of the most advanced machine learning techniques to study 
 
 
 ## Task
-Identify: 
+To identify: 
   1)  Relation Between Customer Rating vs Product Arrived on Time 
   2)  Relation Between Customer Care Calls vs Cost of The Product
   3)  Discount Offered over Product Importance 
